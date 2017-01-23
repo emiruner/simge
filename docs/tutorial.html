@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Simge</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+<!-- Master Container: Centered and 700px wide -->
+<div id="container">
+    
+    <!-- Site Top Header -->
+    <div id="topheader">
+    <span id="title">Simge - Simple Geometry</span>
+	</div>
+    
+	<!-- Site navigation buttons -->
+	<div id="navcontainer">
+        <div class="navitem"><a href="index.html">Home</a></div>
+        <div class="navitem"><a href="tutorial.html">Tutorial</a></div>
+        <div class="navitem"><a href="examples.html">Examples</a></div>
+    </div>
+    <!-- End of Site Navigation Buttons -->
+    
+    <!-- Main content container -->
+    <div id="main">
+        <br />
+        <h1>Tutorial</h1>
+        
+        <p>Here is a simple example on how to use the GLUT wrapper classes. For usage
+        of geometric classes and algorithms see the source code and <a href="examples.html">examples</a>.</p>
+
+	<p>This program displays a window and draws a line:</p>
+
+<pre><code>
+#include &lt;simge/glut/Application.hpp&gt;
+#include &lt;simge/glut/Planar.hpp&gt;
+
+using namespace simge::glut;
+
+class MyWindow : public Planar
+{
+public:
+    MyWindow()
+    : Planar("Hello")
+    {
+        glClearColor(0.8, 0.9, 1.0, 0.0);
+        glColor3f(1.0, 0.0, 0.0);
+    }
+    
+    void paintGL()
+    {
+        glClear(GL_COLOR_BUFFER_BIT);
+        
+        glBegin(GL_LINES);
+        glVertex2d(10, 10);
+        glVertex2d(100, 100);
+        glEnd();
+        
+        glFlush();
+    }
+};
+
+int main(int argc, char* argv[])
+{
+    Application app(argc, argv);
+    MyWindow win;
+
+    app.run();
+}
+</code></pre>
+    <p>Notes:</p>
+    <ul>
+     <li>The <code>Planar</code> class provides a windows with a 2D
+     surface to draw.</li>
+     <li>The string passed to <code>Planar</code> constructor is the title of the window.</li>
+     <li>One time setup OpenGL commands goes to constructor.</li>
+     <li>The OpenGL drawing commands goes into <code>paintGL</code> method.</li>
+    </ul>
+    </div>
+    <!-- End of main container -->
+    
+    <!-- End of footer -->
+</div>
+<!-- End of master container -->
+</body>
+</html>

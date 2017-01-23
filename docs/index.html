@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Simge</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+<!-- Master Container: Centered and 700px wide -->
+<div id="container">
+    
+    <!-- Site Top Header -->
+    <div id="topheader">
+    <span id="title">Simge - Simple Geometry</span>
+	</div>
+    
+	<!-- Site navigation buttons -->
+	<div id="navcontainer">
+        <div class="navitem"><a href="index.html">Home</a></div>
+        <div class="navitem"><a href="tutorial.html">Tutorial</a></div>
+        <div class="navitem"><a href="examples.html">Examples</a></div>
+    </div>
+    <!-- End of Site Navigation Buttons -->
+    
+    <!-- Main content container -->
+    <div id="main">
+        <br />
+        
+        <h1>Introduction</h1>
+        
+        <p>Simge is a simple C++ class library about computational geometry and a simple wrapper
+        around OpenGL GLUT library.</p>
+
+        <p>It contains classes for working with Points, Vectors etc. and operators
+        for intuitive usage to mirror real world equivalent. For example subtracting two points
+        yields a vector, adding a vector to a point yields another point etc.
+        Support for arbitrary dimensions is present.</p>
+
+        <p>The GLUT wrapper support window creation and easy event handling.</p>
+        
+        <span class="headertext1">Features</span>
+
+	<ul>
+	 <li>Basic geometry classes with arbitrary dimensions
+          <ul>
+           <li>Point&lt;Dim&gt;</li>
+           <li>Vector&lt;Dim&gt;</li>
+           <li>Edge&lt;Dim&gt;</li>
+           <li>Polygon&lt;Dim&gt;</li>
+          </ul>
+         </li>
+         <li>Various geometric algorithms
+	  <ul>
+	   <li>Point containment test</li>
+           <li>Line-plane intersection</li>
+           <li>Triangle-triangle intersection</li>
+           <li>Monotone polygon triangulation</li>
+           <li>Weiler-Atherton clipping</li>
+          </ul>
+         </li>
+         <li>GLUT wrappers</li>
+        </ul>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+    <!-- End of main container -->
+    
+</div>
+<!-- End of master container -->
+</body>
+</html>

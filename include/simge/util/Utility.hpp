@@ -92,13 +92,13 @@ void drawEdge(geom::Edge<Dim> const& ls)
 template <typename PointType>
 void drawText(void* font, PointType pos, char const* str)
 {
-    rasterPos(pos);
+    glut::rasterPos(pos);
     
     while(*str != '\0')
     {
         glutBitmapCharacter(font, *str);
         pos[0] += glutBitmapWidth(font, *str);
-        rasterPos(pos);
+        glut::rasterPos(pos);
         ++str;
     }
 }    

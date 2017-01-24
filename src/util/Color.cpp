@@ -25,8 +25,8 @@
 
 #include <string>
 #include <istream>
-#include <cctype>
 #include <cstdlib>
+#include <cstring>
 
 namespace
 {
